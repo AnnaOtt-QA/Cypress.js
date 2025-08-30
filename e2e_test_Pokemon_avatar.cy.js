@@ -3,8 +3,8 @@ describe('Проверка покупки нового аватара', function
     it(' сквозной e2e (end-to-end) автотест для покемонов: на покупку нового аватара для своего тренера', function () {
          cy.visit('https://pokemonbattle.ru/'); //зашли на сайт
 
-         cy.get('#k_email').type('anyuta.podergina@yandex.ru'); //ввожу верный логин
-         cy.get('#k_password').type('94Umizan'); //ввожу верный пароль
+         cy.get('#k_email').type('USER_LOGIN'); //ввожу верный логин
+         cy.get('#k_password').type('USER_PASSWORD'); //ввожу верный пароль
          cy.get('.MuiButton-root').click();// нажимаю кнопку Войти
 
          cy.get('.header_card_trainer').click();// нажимаю кнопку Тренера
@@ -27,4 +27,5 @@ describe('Проверка покупки нового аватара', function
         cy.get('.style_1_base_link_blue').click();//нажимаем на кнопку
 
          });
+
  });
